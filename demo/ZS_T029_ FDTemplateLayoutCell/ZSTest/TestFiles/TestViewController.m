@@ -49,6 +49,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
      OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.reuseCellID];
+    /*
+     if (cell == nil) {
+        //这里代码不会执行
+        cell = [OrderTableViewCell getOrderTableViewCell];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+     }
+     */
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.dataDic = self.dataSource[indexPath.row];
      return cell;
